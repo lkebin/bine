@@ -6,7 +6,7 @@
 //
 // This package can be used with CGO to statically compile Tor. This package
 // expects https://github.com/cretz/tor-static to be cloned at
-// $GOPATH/src/github.com/cretz/tor-static as if it was fetched with go get. 
+// $GOPATH/src/github.com/cretz/tor-static as if it was fetched with go get.
 // If you use go modules the expected path would be $GOPATH/pkg/mod/github.com/cretz/tor-static
 // To build the needed static libs, follow the README in that project. Once the
 // static libs are built, this uses CGO to statically link them here. For
@@ -23,11 +23,11 @@ package embedded
 import (
 	"github.com/cretz/bine/process"
 
-	tor035 "github.com/cretz/bine/process/embedded/tor-0.3.5"
+	tor047 "github.com/cretz/bine/process/embedded/tor-0.4.7"
 )
 
 // NewCreator creates a process.Creator for statically-linked Tor embedded in
 // the binary.
 func NewCreator() process.Creator {
-	return tor035.NewCreator()
+	return tor047.NewCreator()
 }
